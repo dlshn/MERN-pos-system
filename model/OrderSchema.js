@@ -12,11 +12,11 @@ const OrderSchema= new mongoose.Schema({
         type:String, // Pending, Rejected, Comleted, Cancelled 
         requred:true
     },
-    customer:{
+    Customer:{
         type:String, 
         requred:true
     },
-    date:{
+    Date:{
         type:Date,  
         requred:true
     }
