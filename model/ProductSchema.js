@@ -27,4 +27,9 @@ const ProductSchema= new mongoose.Schema({
         requred:true
     }
 });
+
+ProductSchema.statics.findLowStockProducts = function(){
+    return this.find({qtyOnHand:{$lt:10}});
+}
+
 module.exports = mongoose.model('Product',ProductSchema);
